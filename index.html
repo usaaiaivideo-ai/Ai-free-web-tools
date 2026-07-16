@@ -1,14 +1,11 @@
-index.html<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
- <script src="https://pl30385480.effectivecpmnetwork.com/05/a8/f1/05a8f1545c3346b01ec5f06d1b60ea4b.js"></script>
-
-
+    <script src="https://pl30385480.effectivecpmnetwork.com/05/a8/f1/05a8f1545c3346b01ec5f06d1b60ea4b.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Premium MP3 Converter - Instant Download</title>
     <style>
- 
         * {
             box-sizing: border-box;
             margin: 0;
@@ -116,11 +113,9 @@ index.html<!DOCTYPE html>
             font-size: 15px;
             font-weight: bold;
         }
-
-        /* HIGH-PAYING ADS PLACES (बैनर एड्स की प्रीमियम जगहें) */
         .premium-ad-slot {
             background: #111827;
-            border: 2px dashed #eab308; /* पीली बॉर्डर यानी वीआईपी एड्स */
+            border: 2px dashed #eab308;
             color: #eab308;
             padding: 12px;
             text-align: center;
@@ -135,13 +130,11 @@ index.html<!DOCTYPE html>
 </head>
 <body>
 
-    <!-- AD 1: सबसे ऊपर दिखने वाला हाई-पेइंग बैनर (Top Premium Ad) -->
+    <!-- AD 1: Top Premium Ad -->
     <div class="premium-ad-slot">
         <p>⭐ HIGH PAYING BANNER 1 (728x90 or 320x50)</p>
-        
-<script async="async" data-cfasync="false" src="https://pl30387409.effectivecpmnetwork.com/4dcbb7b5a73a411b6b6592b6d949bb11/invoke.js"></script>
-<div id="container-4dcbb7b5a73a411b6b6592b6d949bb11"></div>
-
+        <script async="async" data-cfasync="false" src="https://pl30387409.effectivecpmnetwork.com/4dcbb7b5a73a411b6b6592b6d949bb11/invoke.js"></script>
+        <div id="container-4dcbb7b5a73a411b6b6592b6d949bb11"></div>
     </div>
 
     <div class="converter-card">
@@ -154,35 +147,31 @@ index.html<!DOCTYPE html>
         
         <button id="convertBtn" onclick="startConversion()">Convert & Download MP3 ⚡</button>
 
-        <!-- AD 2: बटन के ठीक नीचे (जहाँ सबसे ज़्यादा क्लिक होते हैं) -->
+        <!-- AD 2: Middle Ad -->
         <div class="premium-ad-slot" style="margin-top: 15px;">
             <p>⭐ HIGH PAYING BANNER 2 (Native Text/Banner Ad)</p>
             <script async="async" data-cfasync="false" src="https://pl30387409.effectivecpmnetwork.com/4dcbb7b5a73a411b6b6592b6d949bb11/invoke.js"></script>
-<div id="container-4dcbb7b5a73a411b6b6592b6d949bb11"></div>
-
+            <div id="container-4dcbb7b5a73a411b6b6592b6d949bb11"></div>
         </div>
 
         <div class="loader" id="loader">Fetching audio from server... ⏳</div>
 
-        <!-- 100% काम करने वाला डाउनलोड बॉक्स -->
         <div class="result-section" id="resultSection">
             <p style="color: #22c55e; font-weight: bold; font-size: 18px; margin-bottom: 5px;">File Ready! 🎉</p>
             <p style="font-size: 13px; color: #9ca3af; margin-bottom: 12px;">Your high-quality MP3 is successfully generated.</p>
-            
-            <!-- सुरक्षित और डायरेक्ट डाउनलोड लिंक -->
             <a href="#" id="downloadLink" class="download-btn" target="_blank" rel="noopener noreferrer">Download Now (No Ads Redirect) 📥</a>
         </div>
     </div>
 
-    <!-- AD 3: सबसे नीचे दिखने वाला बैनर (Bottom Premium Ad) -->
+    <!-- AD 3: Bottom Premium Ad -->
     <div class="premium-ad-slot">
         <p>⭐ HIGH PAYING BANNER 3 (300x250 Large Box Ad)</p>
-       <script async="async" data-cfasync="false" src="https://pl30387409.effectivecpmnetwork.com/4dcbb7b5a73a411b6b6592b6d949bb11/invoke.js"></script>
-<div id="container-4dcbb7b5a73a411b6b6592b6d949bb11"></div>
- 
+        <script async="async" data-cfasync="false" src="https://pl30387409.effectivecpmnetwork.com/4dcbb7b5a73a411b6b6592b6d949bb11/invoke.js"></script>
+        <div id="container-4dcbb7b5a73a411b6b6592b6d949bb11"></div>
     </div>
 
-<script>
+    <!-- JAVASCRIPT ENGINE (यह बिल्कुल सही कर दिया है) -->
+    <script>
     function startConversion() {
         const urlInput = document.getElementById("videoUrl").value.trim();
         const convertBtn = document.getElementById("convertBtn");
@@ -208,29 +197,20 @@ index.html<!DOCTYPE html>
             }
         } catch (e) {}
 
-        // सुरक्षित और तेज़ कनवर्टर API का उपयोग
-               const secureDownloadUrl = `https://api.vein.cc/v1/youtube/mp3?url=https://www.youtube.com/watch?v=${videoId}`;
-        const fallbackUrl = `https://api.de-api.com/yt/mp3?url=https://www.youtube.com/watch?v=${videoId}`;
-
-        setTimeout(() => {
-            document.getElementById("downloadLink").href = fallbackUrl;
+        if (videoId) {
+            const downloadWidgetUrl = `https://button.yt2mp3.cc/?url=https://www.youtube.com/watch?v=${videoId}`;
+            document.getElementById("downloadLink").href = downloadWidgetUrl;
             loader.style.display = "none";
             resultSection.style.display = "block";
             convertBtn.disabled = false;
-        }, 1800);
- 
-            // अन्य सोशल मीडिया वीडियो के लिए 100% वर्किंग ऑल-इन-वन डाउनलोडर
+        } else {
             const multiDownloaderUrl = `https://9xbuddy.org/process?url=${encodeURIComponent(urlInput)}`;
-            
-            setTimeout(() => {
-                document.getElementById("downloadLink").href = multiDownloaderUrl;
-                loader.style.display = "none";
-                resultSection.style.display = "block";
-                convertBtn.disabled = false;
-            }, 1800);
+            document.getElementById("downloadLink").href = multiDownloaderUrl;
+            loader.style.display = "none";
+            resultSection.style.display = "block";
+            convertBtn.disabled = false;
         }
     }
-</script>
-
+    </script>
 </body>
 </html>
