@@ -209,21 +209,16 @@ index.html<!DOCTYPE html>
         } catch (e) {}
 
         // सुरक्षित और तेज़ कनवर्टर API का उपयोग
-        if (videoId) {
-            // यह API बिना किसी फालतू रीडायरेक्ट के सीधे डाउनलोड बटन देती है
-            const secureDownloadUrl = `https://api.vexd.com/convert?url=https://www.youtube.com/watch?v=${videoId}&format=mp3`;
-            
-            // Backup Server: अगर ऊपर वाली API धीमी चले तो Loader.to का डायरेक्ट डाउनलोड विजेट काम करेगा
-            const fallbackUrl = `https://loader.to/api/button/?url=https://www.youtube.com/watch?v=${videoId}&f=mp3`;
+               const secureDownloadUrl = `https://api.vein.cc/v1/youtube/mp3?url=https://www.youtube.com/watch?v=${videoId}`;
+        const fallbackUrl = `https://api.de-api.com/yt/mp3?url=https://www.youtube.com/watch?v=${videoId}`;
 
-            setTimeout(() => {
-                // पहले मुख्य सर्वर का इस्तेमाल करेंगे, ताकि यूज़र को बेस्ट क्वालिटी मिले
-                document.getElementById("downloadLink").href = fallbackUrl; 
-                loader.style.display = "none";
-                resultSection.style.display = "block";
-                convertBtn.disabled = false;
-            }, 1800); 
-        } else {
+        setTimeout(() => {
+            document.getElementById("downloadLink").href = fallbackUrl;
+            loader.style.display = "none";
+            resultSection.style.display = "block";
+            convertBtn.disabled = false;
+        }, 1800);
+ 
             // अन्य सोशल मीडिया वीडियो के लिए 100% वर्किंग ऑल-इन-वन डाउनलोडर
             const multiDownloaderUrl = `https://9xbuddy.org/process?url=${encodeURIComponent(urlInput)}`;
             
