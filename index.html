@@ -1,216 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script src="https://pl30385480.effectivecpmnetwork.com/05/a8/f1/05a8f1545c3346b01ec5f06d1b60ea4b.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Premium MP3 Converter - Instant Download</title>
+    <title>Premium MP3 Converter</title>
     <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-        }
-        body {
-            background: linear-gradient(135deg, #090d16, #111827);
-            color: #f3f4f6;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            padding: 15px;
-        }
-        .converter-card {
-            background: #1f2937;
-            padding: 30px 20px;
-            border-radius: 24px;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.4);
-            width: 100%;
-            max-width: 450px;
-            text-align: center;
-            border: 1px solid #374151;
-            margin: 15px 0;
-        }
-        h1 {
-            font-size: 28px;
-            color: #38bdf8;
-            margin-bottom: 8px;
-            text-shadow: 0 0 10px rgba(56, 189, 248, 0.2);
-        }
-        p.desc {
-            font-size: 14px;
-            color: #9ca3af;
-            margin-bottom: 25px;
-        }
-        input {
-            width: 100%;
-            padding: 16px;
-            background: #111827;
-            border: 2px solid #4b5563;
-            border-radius: 14px;
-            color: white;
-            font-size: 16px;
-            outline: none;
-            transition: 0.3s;
-        }
-        input:focus {
-            border-color: #38bdf8;
-            box-shadow: 0 0 10px rgba(56, 189, 248, 0.3);
-        }
-        button {
-            width: 100%;
-            background: #38bdf8;
-            color: #090d16;
-            border: none;
-            padding: 16px;
-            font-size: 17px;
-            font-weight: bold;
-            border-radius: 14px;
-            cursor: pointer;
-            margin-top: 15px;
-            transition: 0.2s;
-        }
-        button:hover {
-            background: #0ea5e9;
-        }
-        button:disabled {
-            background: #4b5563;
-            color: #9ca3af;
-            cursor: not-allowed;
-        }
-        .result-section {
-            margin-top: 25px;
-            display: none;
-            background: #111827;
-            padding: 20px;
-            border-radius: 16px;
-            border: 2px solid #22c55e;
-        }
-        .download-btn {
-            display: inline-block;
-            width: 100%;
-            background: #22c55e;
-            color: white;
-            text-decoration: none;
-            padding: 14px;
-            border-radius: 12px;
-            font-weight: bold;
-            font-size: 16px;
-            margin-top: 10px;
-            transition: 0.2s;
-            text-align: center;
-        }
-        .download-btn:hover {
-            background: #16a34a;
-            box-shadow: 0 0 15px rgba(34, 197, 94, 0.4);
-        }
-        .loader {
-            display: none;
-            color: #38bdf8;
-            margin-top: 15px;
-            font-size: 15px;
-            font-weight: bold;
-        }
-        .premium-ad-slot {
-            background: #111827;
-            border: 2px dashed #eab308;
-            color: #eab308;
-            padding: 12px;
-            text-align: center;
-            font-size: 13px;
-            font-weight: bold;
-            border-radius: 12px;
-            margin: 10px 0;
-            width: 100%;
-            max-width: 450px;
-        }
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: sans-serif; }
+        body { background: #111827; color: white; display: flex; flex-direction: column; align-items: center; min-height: 100vh; padding: 20px; }
+        .ad-container { width: 100%; max-width: 400px; text-align: center; margin-bottom: 15px; }
+        .converter-card { background: #1f2937; padding: 30px; border-radius: 20px; width: 100%; max-width: 400px; text-align: center; box-shadow: 0 10px 25px rgba(0,0,0,0.3); }
+        input { width: 100%; padding: 15px; border-radius: 10px; border: none; margin-bottom: 15px; }
+        button { width: 100%; padding: 15px; background: #38bdf8; border: none; border-radius: 10px; font-weight: bold; cursor: pointer; color: #111; }
+        .result-section { margin-top: 20px; display: none; }
+        .download-btn { display: block; background: #22c55e; color: white; padding: 15px; text-decoration: none; border-radius: 10px; font-weight: bold; }
     </style>
 </head>
 <body>
 
-    <!-- AD 1: Top Premium Ad -->
-    <div class="premium-ad-slot">
-        <p>⭐ HIGH PAYING BANNER 1 (728x90 or 320x50)</p>
+    <!-- Top Ad -->
+    <div class="ad-container">
         <script async="async" data-cfasync="false" src="https://pl30387409.effectivecpmnetwork.com/4dcbb7b5a73a411b6b6592b6d949bb11/invoke.js"></script>
         <div id="container-4dcbb7b5a73a411b6b6592b6d949bb11"></div>
     </div>
 
     <div class="converter-card">
-        <h1>🎵 Super-Fast MP3 Converter</h1>
-        <p class="desc">Convert YouTube & other videos directly to MP3 with high-speed download!</p>
-        
-        <div class="input-group">
-            <input type="text" id="videoUrl" placeholder="Paste link here (YouTube, Facebook, etc.)...">
-        </div>
-        
-        <button id="convertBtn" onclick="startConversion()">Convert & Download MP3 ⚡</button>
+        <h1>🎵 MP3 Converter</h1>
+        <input type="text" id="videoUrl" placeholder="Paste YouTube link...">
+        <button id="convertBtn" onclick="startConversion()">Convert Now ⚡</button>
 
-        <!-- AD 2: Middle Ad -->
-        <div class="premium-ad-slot" style="margin-top: 15px;">
-            <p>⭐ HIGH PAYING BANNER 2 (Native Text/Banner Ad)</p>
-            <script async="async" data-cfasync="false" src="https://pl30387409.effectivecpmnetwork.com/4dcbb7b5a73a411b6b6592b6d949bb11/invoke.js"></script>
-            <div id="container-4dcbb7b5a73a411b6b6592b6d949bb11"></div>
-        </div>
+        <div id="loader" style="display:none; margin-top:15px; color: #38bdf8;">Processing...</div>
 
-        <div class="loader" id="loader">Fetching audio from server... ⏳</div>
-
+        <!-- Yahan Download ka button hai, iske aas-paas koi AD nahi hai -->
         <div class="result-section" id="resultSection">
-            <p style="color: #22c55e; font-weight: bold; font-size: 18px; margin-bottom: 5px;">File Ready! 🎉</p>
-            <p style="font-size: 13px; color: #9ca3af; margin-bottom: 12px;">Your high-quality MP3 is successfully generated.</p>
-            <a href="#" id="downloadLink" class="download-btn" target="_blank" rel="noopener noreferrer">Download Now (No Ads Redirect) 📥</a>
+            <a href="#" id="downloadLink" class="download-btn" target="_blank">Download MP3</a>
         </div>
     </div>
 
-    <!-- AD 3: Bottom Premium Ad -->
-    <div class="premium-ad-slot">
-        <p>⭐ HIGH PAYING BANNER 3 (300x250 Large Box Ad)</p>
+    <!-- Bottom Ad -->
+    <div class="ad-container" style="margin-top: 20px;">
         <script async="async" data-cfasync="false" src="https://pl30387409.effectivecpmnetwork.com/4dcbb7b5a73a411b6b6592b6d949bb11/invoke.js"></script>
         <div id="container-4dcbb7b5a73a411b6b6592b6d949bb11"></div>
     </div>
 
-    <!-- JAVASCRIPT ENGINE (यह बिल्कुल सही कर दिया है) -->
     <script>
-    function startConversion() {
-        const urlInput = document.getElementById("videoUrl").value.trim();
-        const convertBtn = document.getElementById("convertBtn");
-        const loader = document.getElementById("loader");
-        const resultSection = document.getElementById("resultSection");
+        function startConversion() {
+            const urlInput = document.getElementById("videoUrl").value.trim();
+            if (!urlInput) return alert("Enter URL");
+            
+            const resultSection = document.getElementById("resultSection");
+            const downloadLink = document.getElementById("downloadLink");
 
-        if (urlInput === "") {
-            alert("Please paste a valid video URL!");
-            return;
-        }
+            let videoId = "";
+            try {
+                const url = new URL(urlInput);
+                if (url.hostname.includes("youtube.com")) videoId = url.searchParams.get("v");
+                else if (url.hostname.includes("youtu.be")) videoId = url.pathname.slice(1);
+            } catch(e) {}
 
-        convertBtn.disabled = true;
-        loader.style.display = "block";
-        resultSection.style.display = "none";
-
-        let videoId = "";
-        try {
-            const url = new URL(urlInput);
-            if (url.hostname.includes("youtube.com")) {
-                videoId = url.searchParams.get("v");
-            } else if (url.hostname.includes("youtu.be")) {
-                videoId = url.pathname.slice(1);
+            if (videoId) {
+                downloadLink.href = `https://button.yt2mp3.cc/?url=https://www.youtube.com/watch?v=${videoId}`;
+                resultSection.style.display = "block";
+            } else {
+                alert("Invalid URL");
             }
-        } catch (e) {}
-
-        if (videoId) {
-            const downloadWidgetUrl = `https://button.yt2mp3.cc/?url=https://www.youtube.com/watch?v=${videoId}`;
-            document.getElementById("downloadLink").href = downloadWidgetUrl;
-            loader.style.display = "none";
-            resultSection.style.display = "block";
-            convertBtn.disabled = false;
-        } else {
-            const multiDownloaderUrl = `https://9xbuddy.org/process?url=${encodeURIComponent(urlInput)}`;
-            document.getElementById("downloadLink").href = multiDownloaderUrl;
-            loader.style.display = "none";
-            resultSection.style.display = "block";
-            convertBtn.disabled = false;
         }
-    }
     </script>
 </body>
 </html>
