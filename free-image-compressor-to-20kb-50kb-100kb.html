@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><!-- PLAYABLE_TOUCH_PATCH_V1 --><script>
+(function() {
+  if (window.__playableTouchPatchInstalled) return;
+  window.__playableTouchPatchInstalled = true;
+  var origAdd = EventTarget.prototype.addEventListener;
+  var blockedTypes = { touchstart: 1, touchmove: 1, wheel: 1 };
+  EventTarget.prototype.addEventListener = function(type, listener, options) {
+    if (blockedTypes[type]) {
+      if (options === undefined || options === null) {
+        options = { passive: true };
+      } else if (typeof options === 'boolean') {
+        options = { capture: options, passive: true };
+      } else {
+        options = Object.assign({}, options, { passive: true });
+      }
+    }
+    return origAdd.call(this, type, listener, options);
+  };
+})();
+</script><script>window.Intl=window.Intl||{};Intl.t=function(s){return(Intl._locale&&Intl._locale[s])||s;};</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Free Image Compressor to 20KB, 50KB, 100KB - USA</title>
+<script src="https://pl30385480.effectivecpmnetwork.com/05/a8/f1/05a8f1545c3346b01ec5f06d1b60ea4b.js"></script><script src="https://pl30387408.effectivecpmnetwork.com/59/1a/48/591a48e3e2eeb53bd66ca24e0181bd5a.js"></script>
+<style>
+body{margin:0;font-family:Inter,system-ui,sans-serif;background:linear-gradient(135deg,#7c3aed,#ec4899,#f59e0b);min-height:100vh}
+.glass{background:rgba(255,255,255,0.88);backdrop-filter:blur(16px);border:1px solid rgba(255,255,255,0.6);box-shadow:0 20px 80px rgba(0,0,0,0.15)}
+#fileInput{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:pointer;z-index:20}
+</style>
+</head>
+<body>
+<div style="max-width:1100px;margin:0 auto;padding:20px">
+<div class="glass" style="border-radius:16px;padding:10px;text-align:center;margin-bottom:20px">
+<div style="font-size:10px;font-weight:800;letter-spacing:0.2em;color:#6d28d9">ADVERTISEMENT - TOP BANNER</div>
+<div style="display:flex;justify-content:center;margin-top:8px">
+<script>atOptions={'key':'287aadc273baa85c39249e53582b64a7','format':'iframe','height':250,'width':300,'params':{}};</script><script src="https://www.highperformanceformat.com/287aadc273baa85c39249e53582b64a7/invoke.js"></script>
+</div>
+</div>
+<div style="text-align:center;color:white;padding:10px"><h1 style="font-size:32px;font-weight:900;margin:0">Free Photo Compressor</h1><p style="font-weight:700">Compress to 20KB, 50KB, 100KB Instantly - 100% Free</p></div>
+<div class="glass" style="border-radius:24px;padding:24px;max-width:700px;margin:0 auto">
+<h2>Image Compressor - JPG PNG WEBP</h2>
+<div class="upload-zone" style="border:3px dashed #c4b5fd;border-radius:20px;padding:40px 20px;text-align:center;background:#faf5ff;position:relative;overflow:hidden">
+<input type="file" id="fileInput" accept="image/jpeg,image/png,image/webp,image/jpg">
+<div style="font-size:50px">⬆️</div>
+<h3>Drop image here or click to upload</h3>
+<p style="font-size:13px;color:#666">Supports JPG, PNG, WEBP. Max 10MB. All processing in browser.</p>
+<button type="button" style="margin-top:12px;background:#111;color:#fff;border:0;border-radius:999px;padding:12px 24px;font-weight:700;pointer-events:none">Choose Photo</button>
+</div>
+<img id="preview" style="max-width:100%;max-height:300px;border-radius:16px;margin:15px auto;display:none">
+<div id="controls" style="display:none;text-align:center;margin-top:16px">
+<p><b>Original:</b> <span id="origSize"></span></p>
+<div>
+<button onclick="setTarget(20,this)" class="sizeBtn" style="padding:10px 18px;border-radius:12px;border:2px solid #ddd;margin:4px;background:#111;color:#fff;font-weight:800">20KB</button>
+<button onclick="setTarget(50,this)" class="sizeBtn" style="padding:10px 18px;border-radius:12px;border:2px solid #ddd;margin:4px;background:#fff;font-weight:800">50KB</button>
+<button onclick="setTarget(100,this)" class="sizeBtn" style="padding:10px 18px;border-radius:12px;border:2px solid #ddd;margin:4px;background:#fff;font-weight:800">100KB</button>
+<button onclick="setTarget(200,this)" class="sizeBtn" style="padding:10px 18px;border-radius:12px;border:2px solid #ddd;margin:4px;background:#fff;font-weight:800">200KB</button>
+</div>
+<button onclick="compressImage()" style="width:100%;margin-top:14px;background:linear-gradient(90deg,#7c3aed,#ec4899);color:#fff;border:0;border-radius:999px;padding:16px;font-size:18px;font-weight:900">Compress Now</button>
+</div>
+<div id="resultBox" style="display:none;background:#f0fdf4;border:2px solid #bbf7d0;border-radius:16px;padding:16px;margin-top:16px;text-align:center">
+<h3>Compressed!</h3>
+<p>Original: <span id="resOrig"></span> | Compressed: <span id="resComp"></span> | Saved: <span id="resSaved"></span></p>
+<img id="compressedPreview" style="max-width:100%;border-radius:12px;margin:10px auto"><br>
+<a id="downloadBtn" style="display:inline-block;background:#111;color:#fff;padding:14px 28px;border-radius:999px;text-decoration:none;font-weight:800" download="compressed.jpg">Download</a>
+</div>
+<div class="glass" style="border-radius:16px;padding:12px;text-align:center;margin-top:20px;border:2px dashed #a78bfa">
+<div style="font-size:10px;font-weight:800;color:#7c3aed;letter-spacing:0.2em">NATIVE BANNER - INSIDE TOOL</div>
+<div style="margin-top:8px;display:flex;justify-content:center">
+<script async="async" data-cfasync="false" src="https://pl30387409.effectivecpmnetwork.com/4dcbb7b5a73a411b6b6592b6d949bb11/invoke.js"></script><div id="container-4dcbb7b5a73a411b6b6592b6d949bb11"></div>
+</div>
+</div>
+</div>
+<div class="glass" style="border-radius:16px;padding:12px;text-align:center;margin:20px auto;max-width:700px"><div style="font-size:10px;font-weight:800">SOCIAL BAR - ACTIVE</div><div style="font-size:12px;color:#666">Social Bar auto shows from head script</div></div>
+<div class="glass" style="border-radius:24px;padding:24px;margin-top:20px;line-height:1.7">
+<h2>Free Online Image Compressor - Compress Images to 20KB, 50KB, 100KB for USA Users</h2>
+<p>100% free, fast, private image compressor that works on mobile. Compress JPG, PNG, WEBP to exact sizes like 20KB, 50KB, 100KB, 200KB without losing much quality. No premium needed. All compression happens client-side, photos never leave device. Perfect for bloggers, students, job forms, e-commerce sellers in USA. Benefits: Save data, upload faster, meet exact 20KB/50KB requirements, improve SEO loading speed. Our canvas algorithm intelligently reduces quality and dimensions to hit exact target size.</p>
+<p><i>Disclaimer: Browser-based compression, results vary. We do not store images.</i></p>
+</div>
+</div>
+<script>
+let originalFile=null, originalDataUrl=null, targetKB=20;
+const fileInput=document.getElementById('fileInput');
+const preview=document.getElementById('preview');
+fileInput.addEventListener('change', function(e){
+  if(e.target.files && e.target.files[0]) handleFile(e.target.files[0]);
+});
+function handleFile(file){
+  if(!file.type.startsWith('image/')){alert('Please select image');return;}
+  originalFile=file;
+  document.getElementById('origSize').innerText=(file.size/1024).toFixed(1)+' KB';
+  const reader=new FileReader();
+  reader.onload=function(ev){
+    originalDataUrl=ev.target.result;
+    preview.src=originalDataUrl;
+    preview.style.display='block';
+    document.getElementById('controls').style.display='block';
+    document.getElementById('resultBox').style.display='none';
+  };
+  reader.readAsDataURL(file);
+}
+function setTarget(kb, el){
+  targetKB=kb;
+  document.querySelectorAll('.sizeBtn').forEach(function(b){b.style.background='#fff';b.style.color='#111'});
+  if(el){el.style.background='#111';el.style.color='#fff';}
+}
+function compressImage(){
+  if(!originalDataUrl) return;
+  const img=new Image();
+  img.onload=function(){
+    const canvas=document.createElement('canvas');
+    const ctx=canvas.getContext('2d');
+    let w=img.width, h=img.height;
+    const maxDim=2000;
+    if(w>maxDim||h>maxDim){const r=Math.min(maxDim/w,maxDim/h);w*=r;h*=r;}
+    canvas.width=w; canvas.height=h;
+    ctx.drawImage(img,0,0,w,h);
+    let quality=0.9, attempt=0;
+    function tryCompress(){
+      canvas.toBlob(function(blob){
+        if(!blob){alert('Error');return;}
+        const sizeKB=blob.size/1024;
+        if(sizeKB<=targetKB || quality<=0.1 || attempt>25){
+          const url=URL.createObjectURL(blob);
+          document.getElementById('compressedPreview').src=url;
+          document.getElementById('resOrig').innerText=(originalFile.size/1024).toFixed(1)+' KB';
+          document.getElementById('resComp').innerText=sizeKB.toFixed(1)+' KB';
+          document.getElementById('resSaved').innerText=(((originalFile.size-blob.size)/originalFile.size)*100).toFixed(1)+'%';
+          const dl=document.getElementById('downloadBtn');
+          dl.href=url;
+          document.getElementById('resultBox').style.display='block';
+          document.getElementById('resultBox').scrollIntoView({behavior:'smooth'});
+        }else{
+          if(quality>0.2) quality-=0.1;
+          else {w*=0.85;h*=0.85;canvas.width=w;canvas.height=h;ctx.drawImage(img,0,0,w,h);quality=0.8;}
+          attempt++;
+          tryCompress();
+        }
+      },'image/jpeg',quality);
+    }
+    tryCompress();
+  };
+  img.src=originalDataUrl;
+}
+const dz=document.querySelector('.upload-zone');
+dz.addEventListener('dragover', function(e){e.preventDefault(); dz.style.background='#ede9fe';});
+dz.addEventListener('dragleave', function(e){dz.style.background='#faf5ff';});
+dz.addEventListener('drop', function(e){e.preventDefault(); dz.style.background='#faf5ff'; if(e.dataTransfer.files[0]) handleFile(e.dataTransfer.files[0]);});
+</script>
+</body>
+</html>
